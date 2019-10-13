@@ -17,7 +17,7 @@ export class TokenService {
   constructor(private http: HttpClient) { }
 
   public getResponseHeaders(credentials: Credentials) {
-    let loginUrl = API_URL + '/login';
+    let loginUrl = API_URL + '/auth/login';
     return this.http.post(loginUrl, credentials, httpOptions);
   }
 }

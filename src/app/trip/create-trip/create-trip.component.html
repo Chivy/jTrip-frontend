@@ -1,0 +1,115 @@
+<div class="row">
+    <div class="col-lg-3"></div>
+    <div class="col-lg-6">
+        <div class="card-block">
+            <div class="card-header font-light-bold text-light" style="background-color: rgba(10, 10, 10, 0.6);">
+                <div class="card-body">
+                    <h3 class="mb-3 text-center text-warning mb-5">Create Trip</h3>
+                    <div class="form-group">
+                        <input type="text" [(ngModel)]="trip.name" class="form-control" id="nameInputId"
+                            placeholder="Name">
+                    </div>
+
+                    <div class="form-group">
+                        <textarea rows="4" cols="4" [(ngModel)]="trip.description" class="form-control" id="descriptionInputId"
+                            placeholder="Description"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="font-weight-bold text-black mr-4">Bank account number</span>
+                        <input type="text" [(ngModel)]="trip.bankAccountNumber" class="form-control"
+                            id="tbackAccountInputId" />
+                    </div>
+
+                    <div class="row form-group col-12 ">
+                        <div class="form-group mb-6">
+                            <span class="font-weight-bold text-white mr-6">Select start date</span>
+                            <div class="row">
+                                <div class="col-10">
+                                    <input id="tripStartDateInputId" type="datetime-local" [(ngModel)]="trip.startDate"
+                                        class='input-group datetime form-control'>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-6">
+                            <span class="font-weight-bold text-white mr-6">Select end date</span>
+                            <div class="row">
+                                <div class="col-10">
+                                    <input id="tripEndDateInputId" type="datetime-local" [(ngModel)]="trip.endDate"
+                                        class='input-group datetime form-control'>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    </div>
+
+                    <div class="row form-group col-12">
+                        <div class="form-group mb-6">
+                            <span class="font-weight-bold text-black mr-6">Number of days</span>
+                            <div class="row">
+                                <div class="col-10">
+                                    <input type="number" [(ngModel)]="trip.numberOfDays" class="form-control"
+                                        id="numberOfDaysInputId" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-6">
+                            <span class="font-weight-bold text-black mr-6">Number of seats</span>
+                            <div class="row">
+                                <div class="col-10">
+                                    <input type="number" [(ngModel)]="trip.numberOfSeats" class="form-control"
+                                        id="numberOfSeatsInputId" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row form-group col-12 ">
+                        <div class="form-group mb-6">
+                            <span class="font-weight-bold text-black mr-6">Cost per person</span>
+                            <div class="row">
+                                <div class="col-10">
+                                    <input type="number" [(ngModel)]="trip.costPerPerson" class="form-control"
+                                        id="costPerPersonInputId" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group mb-6">
+                            <span class="font-weight-bold text-white mr-6">Select end date</span>
+                            <div class="row">
+                                <div class="col-10">
+                                    <input type="number" [(ngModel)]="trip.totalCost" class="form-control"
+                                        id="totalCostInputId" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <label class="font-weight-bold text-black mr-4">Visibility</label><br>
+
+                        <input type="radio" value="true" name="visibled" [(ngModel)]="trip.isVisible">
+                        <span class="font-weight-bold text-light"> Is visible</span>
+
+                        <input type="radio" class=" ml-4" value="false" name="visibled"   [(ngModel)]="trip.isVisible">
+                        <span class="font-weight-bold text-light"> Is't visible</span>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-4"></div>
+                        <div class="form-group col-4">
+                            <button class="btn btn-danger btn-lg btn-block" (click)="cancelCreation()">Cancel</button>
+                        </div>
+                        <div class="form-group col-4">
+                            <button class="btn btn-success btn-lg btn-block" (click)="createTrip()">Create trip</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-3"></div>
+</div>

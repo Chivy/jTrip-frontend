@@ -6,11 +6,17 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './auth/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { CreateTripComponent } from './trip/create-trip/create-trip.component';
+import { RegisterComponent } from './register/register.component';
+import { RegistrationConfirmationComponent } from './registration-confirmation/registration-confirmation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    CreateTripComponent,
+    RegisterComponent,
+    RegistrationConfirmationComponent
   ],
   imports: [
     BrowserModule,

@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'jTrip';
+
+  logInPageUrl: string = '/login';
+  signUpPageUrl: string = '/signup';
+  createTripPageUrl: string = '/create-trip';
 }

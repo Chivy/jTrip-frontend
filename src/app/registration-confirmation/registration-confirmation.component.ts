@@ -21,6 +21,6 @@ export class RegistrationConfirmationComponent implements OnInit {
   }
 
   private confirm(token: string) {
-    this.confirmationService.confirm(token);
+    this.confirmationService.confirm(token).subscribe();
   }
 }

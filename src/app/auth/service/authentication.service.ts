@@ -28,7 +28,7 @@ export class AuthenticationService {
     .subscribe(
       res => {
         this.saveToken(res.headers.get('authorization'));
-        this.router.navigate([this.redirectToUrl]);
+        this.router.navigateByUrl('/');
       }
     )
   }

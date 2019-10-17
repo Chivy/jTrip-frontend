@@ -13,13 +13,12 @@ export class RegisterComponent implements OnInit {
 
   constructor(public router: Router, public registerService: RegisterService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   public signUp() {
+
     this.registerService.registerNewUser(this.register)
-      .subscribe((data: {}) => {
-        this.router.navigate(['/'])
-      })
+    .subscribe()
+
   }
 }
